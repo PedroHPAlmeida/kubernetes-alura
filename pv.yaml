@@ -1,0 +1,12 @@
+apiVersion: v1 # Esta configuração é especifica para cada CP - Consultar a documentação do Kubernetes
+kind: PersistenceVolume
+metadata:
+  name: pv-1
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  gcePersistenceDisk:
+    pdName: pv-disk
+  storageClassName: standard
